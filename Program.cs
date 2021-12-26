@@ -10,7 +10,7 @@ namespace AddressBookTrail
         static void Main(string[] args)
         {
            
-            Console.WriteLine("Choose the operation:\n1.Add Contact.\n2.View Contact Info.\n3.Exit Adress Book Application.");
+            Console.WriteLine("Choose the operation:\n1.Add Contact.\n2.View Contact Info.\n3.Exit Adress Book Application.\n4.To Edit Exisitng Contact");
             int userInput = Convert.ToInt32(Console.ReadLine());
             var addressBook = new AddressBook();
 
@@ -53,7 +53,7 @@ namespace AddressBookTrail
                         break;
 
                 }
-                Console.WriteLine("Choose the operation:\n1.Add Contact.\n2.View Contact Info.\n3.Exit Adress Book Application.\n=================================");
+                Console.WriteLine("Choose the operation:\n1.Add Contact.\n2.View Contact Info.\n3.Exit Adress Book Application.\n4.To Edit Exisitng Contact");
                 userInput = Convert.ToInt32(Console.ReadLine());
             }
         }
