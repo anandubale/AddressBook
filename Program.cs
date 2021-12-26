@@ -42,7 +42,12 @@ namespace AddressBookTrail
                         addressBook.DisplayAllContact();
                         break;
                     case 3:
-                        return;  
+                        return;
+                    case 4:
+                        Console.WriteLine("Enter nAme you want to edit:");
+                        string name = Console.ReadLine();
+                        addressBook.EditContact(name);
+                        break;
                     default:
                         Console.WriteLine("Choose valid operation.");
                         break;
