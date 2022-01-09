@@ -42,17 +42,17 @@ namespace AddressBookTrail
         {
             foreach (var element in DictName)
             {
-                Console.WriteLine("\nADDRESSBOOK :\nAddressbook Key: " + element.Key + "\nPerson's Name: " + element.Value.FirstName + " " + element.Value.LastName + "\nAddress: " + element.Value.Address + "\nCity: " + element.Value.City + "\nState: " + element.Value.State + "\nZip Code: " + element.Value.ZipCode + "\nPhone Number: " + element.Value.PhoneNumber + "\nEmail: " + element.Value.Email);
+                Console.WriteLine("----------------\nADDRESSBOOK :\n----------------\nAddressbook Key: " + element.Key + "\nPerson's Name: " + element.Value.FirstName + " " + element.Value.LastName + "\nAddress: " + element.Value.Address + "\nCity: " + element.Value.City + "\nState: " + element.Value.State + "\nZip Code: " + element.Value.ZipCode + "\nPhone Number: " + element.Value.PhoneNumber + "\nEmail: " + element.Value.Email);
             }
         }
         public void EditContact()
         {
-            Console.WriteLine("Available Addressbooks are: ");
+            Console.WriteLine("Available Addressbooks are:: ");
             foreach (var key in DictName)
             {
-                Console.WriteLine(key.Key );
+                Console.WriteLine(key.Key + "\n----------------");
             }
-            Console.WriteLine("nEnter Name of the AddressBook you want to edit: ");
+            Console.WriteLine("------------------\nEnter Name of the AddressBook you want to edit:: ");
             string dictName = Console.ReadLine();
 
             foreach (var element in DictName)
@@ -83,7 +83,7 @@ namespace AddressBookTrail
                     Console.WriteLine("Enter new Email:");
                     string newEmail = Console.ReadLine();
                     element.Value.Email = newEmail;
-                    Console.WriteLine("Contact Edited!");
+                    Console.WriteLine("---------------------------------\n!!Contact Edited!!");
                 }
             }
 
@@ -97,7 +97,7 @@ namespace AddressBookTrail
                 if (contact.FirstName == name)
                 {
                     List.Remove(contact);
-                    Console.WriteLine("Contact Removed!");
+                    Console.WriteLine("---------------------------------\n!!Contact Removed!!");
                     break;
                 }
             }
