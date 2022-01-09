@@ -9,47 +9,35 @@ namespace AddressBookTrail
 
         static void Main(string[] args)
         {
-           
-            Console.WriteLine("Choose the operation:\n1.Add Contact.\n2.View Contact Info.\n3.Exit Adress Book Application.");
-            int userInput = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Hello! Welcome to Address Book.");
+            Console.WriteLine("nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.");
+            var userInput = Console.ReadLine();
             var addressBook = new AddressBook();
 
             while (true)
             {
                 switch (userInput)
                 {
-                    case 1:
-                        Console.WriteLine("First Name:");
-                        string firstname = Console.ReadLine();
-                        Console.WriteLine("Last Name:");
-                        string lastname = Console.ReadLine();
-                        Console.WriteLine("Address:");
-                        string address = Console.ReadLine();
-                        Console.WriteLine("City:");
-                        string city = Console.ReadLine();
-                        Console.WriteLine("State:");
-                        string state = Console.ReadLine();
-                        Console.WriteLine("Zip Code:");
-                        string zipcode = Console.ReadLine();
-                        Console.WriteLine("Phone Number:");
-                        string phonenumber = Console.ReadLine();
-                        Console.WriteLine("Email:");
-                        string email = Console.ReadLine();
-                        var newContact = new Contact(firstname, lastname, address, city, state, zipcode, phonenumber, email);
-                        addressBook.AddContact(newContact);
+                    case "1":
+                        addressBook.StoreContact();
                         break;
-                    case 2:
+                    case "2":
                         addressBook.DisplayAllContact();
                         break;
-                    case 3:
-                        return;  
-                    default:
-                        Console.WriteLine("Choose valid operation.");
+                    case "3":
+                        addressBook.EditContact();
                         break;
-
+                    case "4":
+                        addressBook.DeleteContact();
+                        break;
+                    case "5":
+                        return;
+                    default:
+                        Console.WriteLine("! Choose valid operation ");
+                        break;
                 }
-                Console.WriteLine("Choose the operation:\n1.Add Contact.\n2.View Contact Info.\n3.Exit Adress Book Application.\n=================================");
-                userInput = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.");
+                userInput = Console.ReadLine();
             }
         }
     }
