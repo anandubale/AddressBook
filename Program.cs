@@ -10,7 +10,7 @@ namespace AddressBookTrail
         static void Main(string[] args)
         {
             Console.WriteLine("Hello! Welcome to Address Book.");
-            Console.WriteLine("nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n6.Check Duplicate");
+            Console.WriteLine("nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n6.Check Duplicate \n7.SearchPerson");
             var userInput = Console.ReadLine();
             var addressBook = new AddressBook();
 
@@ -35,11 +35,14 @@ namespace AddressBookTrail
                     case "6":
                         addressBook.DuplicateChecker();
                         break;
+                    case "7":
+                        addressBook.SearchPerson();
+                        break;
                     default:
                         Console.WriteLine("! Choose valid operation ");
                         break;
                 }
-                Console.WriteLine("nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n6.Check Duplicate");
+                Console.WriteLine("nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n6.Check Duplicate \n7.SearchPerson");
                 userInput = Console.ReadLine();
             }
         }
