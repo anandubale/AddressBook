@@ -10,7 +10,7 @@ namespace AddressBookTrail
         static void Main(string[] args)
         {
             Console.WriteLine("Hello! Welcome to Address Book.");
-            Console.WriteLine("nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n6.Check Duplicate \n7.SearchPerson\n8.Check Person Using City");
+            Console.WriteLine("nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n6.Check Duplicate \n7.SearchPerson\n8.Check Person Using City\n9.Find Number Of Person");
             var userInput = Console.ReadLine();
             var addressBook = new AddressBook();
 
@@ -41,11 +41,14 @@ namespace AddressBookTrail
                     case "8":
                         addressBook.FindCityState();
                         break;
+                    case "9":
+                        addressBook.FindNumOfPerson();
+                        break;
                     default:
                         Console.WriteLine("! Choose valid operation ");
                         break;
                 }
-                Console.WriteLine("nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n6.Check Duplicate \n7.SearchPerson\n8.Check Person Using City");
+                Console.WriteLine("nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n6.Check Duplicate \n7.SearchPerson\n8.Check Person Using City\n9.Find Number Of Person");
                 userInput = Console.ReadLine();
             }
         }
