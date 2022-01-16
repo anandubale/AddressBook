@@ -200,6 +200,15 @@ namespace AddressBookTrail
             Console.WriteLine("\nNumber of Person found in " + cityState + " are " + countPerson);
         }
 
+        public void SortByPersonName()
+        {
+            Dictionary<string, Contact> sortList = DictName.OrderBy(x => x.Value.FirstName).ToDictionary(x => x.Key, x => x.Value);
+            foreach (var element in sortList)
+            {
+                Console.WriteLine(element.Value.FirstName + " " + element.Value.LastName + " " + element.Value.PhoneNumber);
+            }
+        }
+
 
 
 
