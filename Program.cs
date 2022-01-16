@@ -10,7 +10,7 @@ namespace AddressBookTrail
         static void Main(string[] args)
         {
             Console.WriteLine("Hello! Welcome to Address Book.");
-            Console.WriteLine("nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n6.Check Duplicate \n7.SearchPerson\n8.Check Person Using City\n9.Find Number Of Person");
+            Console.WriteLine("nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n6.Check Duplicate \n7.SearchPerson\n8.Check Person Using City\n9.Find Number Of Person\n10.Sort By Person Name\n11.Sort By City or Zip or State");
             var userInput = Console.ReadLine();
             var addressBook = new AddressBook();
 
@@ -47,11 +47,13 @@ namespace AddressBookTrail
                     case "10":
                         addressBook.SortByPersonName();
                         break;
+                    case "11":
+                        addressBook.ChooseSort();
                     default:
                         Console.WriteLine("! Choose valid operation ");
                         break;
                 }
-                Console.WriteLine("nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n6.Check Duplicate \n7.SearchPerson\n8.Check Person Using City\n9.Find Number Of Person\n10.Sort By Person Name");
+                Console.WriteLine("nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n6.Check Duplicate \n7.SearchPerson\n8.Check Person Using City\n9.Find Number Of Person\n10.Sort By Person Name\n11.Sort By City or Zip or State");
                 userInput = Console.ReadLine();
             }
         }
