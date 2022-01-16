@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using CsvHelper;
 
 namespace AddressBookTrail
 {
@@ -248,9 +250,19 @@ namespace AddressBookTrail
                     Console.WriteLine("=================================\n!!! Choose valid operation !!!\n=================================");
                     break;
             }
+
         }
 
 
+        public void ConvertToText()
+        {
+            FileIO.WriteDataToTxt(DictName);
+        }
+
+        public void ConvertToCsv()
+        {
+            FileIO.WriteDataToCSV(DictName);
+        }
 
 
     }
