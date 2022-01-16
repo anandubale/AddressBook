@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "XC6Mvlx2X7L+gBajxJJ0uIcAw2rSAYnGx0pwCNJRiow+IYCfbD2LNyaWMHgP9kaLHGSttE+U5R5L3RF3PW/eBA==",
+  "dgSpecHash": "WB9jzVmD3CDNj5H6OSj8vCalAHkEyL8e9yGir5/89QsoziMmsHwIKLVW/ONkase+O4q2bUjfSc2LUwjYmpGX7w==",
   "success": true,
   "projectFilePath": "C:\\Users\\anand\\Desktop\\Bridgelabz\\Day10Assigment\\AddressBook\\AddressBookTrail\\AddressBookTrail\\AddressBookTrail.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\anand\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512"
+    "C:\\Users\\anand\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512",
+    "C:\\Users\\anand\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

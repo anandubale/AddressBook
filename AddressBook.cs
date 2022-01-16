@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using CsvHelper;
+using Newtonsoft.Json;
 
 namespace AddressBookTrail
 {
@@ -262,6 +263,10 @@ namespace AddressBookTrail
         public void ConvertToCsv()
         {
             FileIO.WriteDataToCSV(DictName);
+        }
+        public void ConvertToJson()
+        {
+            json.WriteToJson(DictName);
         }
 
 
